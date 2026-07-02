@@ -2,38 +2,77 @@
 <html lang="en">
 
 <head>
+
+    <!-- ==========================================
+         Yuri After Story
+         Version 1.0.0
+         Author: Mary
+    =========================================== -->
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="A cozy companion experience inspired by Yuri from DDLC.">
 
     <title>Yuri After Story</title>
 
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
 
     <!-- Background -->
-    <div id="background"></div>
 
-    <!-- Main Game -->
-    <main id="game">
+    <div id="background" aria-hidden="true"></div>
+
+    <!-- Loading Screen (Future Feature) -->
+
+    <div id="loadingScreen" hidden>
+
+        <p>Loading...</p>
+
+    </div>
+
+    <!-- Main Application -->
+
+    <main id="app">
 
         <!-- Top Bar -->
+
         <header id="topBar">
 
-            <div class="stat">
-                ❤️ Affection:
-                <span id="affection">0</span>
-            </div>
+            <section class="stat">
 
-            <div class="stat">
-                📅 Visits:
-                <span id="visits">0</span>
-            </div>
+                <span class="label">
+                    ❤️ Affection
+                </span>
+
+                <span id="affection">
+                    0
+                </span>
+
+            </section>
+
+            <section class="stat">
+
+                <span class="label">
+                    📅 Visits
+                </span>
+
+                <span id="visits">
+                    0
+                </span>
+
+            </section>
 
         </header>
 
         <!-- Character -->
+
         <section id="characterArea">
 
             <img
@@ -44,36 +83,61 @@
         </section>
 
         <!-- Dialogue -->
+
         <section id="dialogueBox">
 
-            <div id="speaker">
-                Yuri
-            </div>
+            <h2 id="speakerName">
 
-            <div id="dialogue">
-                ...
-            </div>
+                Yuri
+
+            </h2>
+
+            <p id="dialogueText">
+
+                Welcome...
+
+            </p>
 
             <button id="nextButton">
+
                 Continue ▶
+
             </button>
 
         </section>
 
     </main>
 
+    <!-- Future Panels -->
+
+    <aside id="settingsPanel" hidden></aside>
+
+    <aside id="historyPanel" hidden></aside>
+
+    <aside id="musicPanel" hidden></aside>
+
+    <aside id="notificationPanel" hidden></aside>
+
     <!-- Data -->
+
     <script src="js/data/config.js"></script>
+
     <script src="js/data/dialogue.js"></script>
 
     <!-- Engine -->
+
     <script src="js/engine/save.js"></script>
+
     <script src="js/engine/typing.js"></script>
+
     <script src="js/engine/dialogueEngine.js"></script>
+
     <script src="js/engine/affection.js"></script>
+
     <script src="js/engine/ui.js"></script>
 
-    <!-- Main -->
+    <!-- Application -->
+
     <script src="js/app.js"></script>
 
 </body>
