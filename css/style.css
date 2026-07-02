@@ -1,1 +1,240 @@
+/*
+==========================================
+Yuri After Story
+Version: 1.0.0
+Main Stylesheet
+==========================================
+*/
 
+/* ---------- Reset ---------- */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family: Georgia, serif;
+
+    background:#1d1830;
+
+    color:white;
+
+    overflow:hidden;
+
+}
+
+/* ---------- Background ---------- */
+
+#background{
+
+    position:fixed;
+
+    inset:0;
+
+    background-image:
+        linear-gradient(
+            rgba(15,12,25,.45),
+            rgba(15,12,25,.70)
+        ),
+        url("../assets/background/library.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    z-index:-2;
+
+}
+
+/* ---------- Main ---------- */
+
+#game{
+
+    width:min(1200px,95vw);
+
+    height:100vh;
+
+    margin:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+/* ---------- Top Bar ---------- */
+
+#topBar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:25px;
+
+    font-size:1rem;
+
+}
+
+.stat{
+
+    background:rgba(35,25,55,.70);
+
+    padding:10px 18px;
+
+    border-radius:14px;
+
+    backdrop-filter:blur(6px);
+
+}
+
+/* ---------- Character ---------- */
+
+#characterArea{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+}
+
+#yuriSprite{
+
+    max-height:82vh;
+
+    max-width:90%;
+
+    object-fit:contain;
+
+    user-select:none;
+
+    pointer-events:none;
+
+    filter:drop-shadow(0 0 18px rgba(0,0,0,.45));
+
+}
+
+/* ---------- Dialogue ---------- */
+
+#dialogueBox{
+
+    width:100%;
+
+    background:rgba(28,22,45,.92);
+
+    border-top:3px solid #9d7ad6;
+
+    padding:25px;
+
+}
+
+/* Speaker */
+
+#speaker{
+
+    color:#d8b7ff;
+
+    font-weight:bold;
+
+    font-size:1.25rem;
+
+    margin-bottom:15px;
+
+}
+
+/* Dialogue */
+
+#dialogue{
+
+    min-height:85px;
+
+    line-height:1.8;
+
+    font-size:1.08rem;
+
+}
+
+/* ---------- Button ---------- */
+
+#nextButton{
+
+    margin-top:22px;
+
+    float:right;
+
+    border:none;
+
+    background:#8c63d3;
+
+    color:white;
+
+    padding:12px 26px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    font-size:1rem;
+
+}
+
+#nextButton:hover{
+
+    background:#a47be8;
+
+    transform:translateY(-2px);
+
+}
+
+/* ---------- Mobile ---------- */
+
+@media(max-width:900px){
+
+    #yuriSprite{
+
+        max-height:60vh;
+
+    }
+
+    #dialogue{
+
+        min-height:120px;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    #topBar{
+
+        font-size:.9rem;
+
+        padding:18px;
+
+    }
+
+    #speaker{
+
+        font-size:1.1rem;
+
+    }
+
+    #dialogue{
+
+        font-size:.95rem;
+
+    }
+
+}
