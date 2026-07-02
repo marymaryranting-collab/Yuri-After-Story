@@ -1,1 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Yuri After Story</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div id="background"></div>
+
+    <!-- Main Game -->
+    <main id="game">
+
+        <!-- Top Bar -->
+        <header id="topBar">
+
+            <div class="stat">
+                ❤️ Affection:
+                <span id="affection">0</span>
+            </div>
+
+            <div class="stat">
+                📅 Visits:
+                <span id="visits">0</span>
+            </div>
+
+        </header>
+
+        <!-- Character -->
+        <section id="characterArea">
+
+            <img
+                id="yuriSprite"
+                src="assets/sprites/yuri.png"
+                alt="Yuri">
+
+        </section>
+
+        <!-- Dialogue -->
+        <section id="dialogueBox">
+
+            <div id="speaker">
+                Yuri
+            </div>
+
+            <div id="dialogue">
+                ...
+            </div>
+
+            <button id="nextButton">
+                Continue ▶
+            </button>
+
+        </section>
+
+    </main>
+
+    <!-- Data -->
+    <script src="js/data/config.js"></script>
+    <script src="js/data/dialogue.js"></script>
+
+    <!-- Engine -->
+    <script src="js/engine/save.js"></script>
+    <script src="js/engine/typing.js"></script>
+    <script src="js/engine/dialogueEngine.js"></script>
+    <script src="js/engine/affection.js"></script>
+    <script src="js/engine/ui.js"></script>
+
+    <!-- Main -->
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
